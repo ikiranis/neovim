@@ -22,7 +22,6 @@ return {
                     "jdtls",
                     "eslint",
                     "lemminx",
-                    "solargraph"
                 }
             });
         end
@@ -35,9 +34,6 @@ return {
 
             local lspconfig = require("lspconfig")
             lspconfig.ts_ls.setup({
-                capabilities = capabilities
-            })
-            lspconfig.solargraph.setup({
                 capabilities = capabilities
             })
             lspconfig.html.setup({
