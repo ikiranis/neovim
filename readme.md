@@ -87,3 +87,64 @@ https://raw.githubusercontent.com/dDeedev/install-nerd-font-linux/refs/heads/mai
 https://github.com/CopilotC-Nvim/CopilotChat.nvim
 
 https://copilotc-nvim.github.io/CopilotChat.nvim/
+
+
+### Setup Tmux
+
+#### Source tutorial
+
+https://www.youtube.com/playlist?list=PLsz00TDipIfdrJDjpULKY7mQlIFi4HjdR
+
+#### TPM plugin
+
+https://github.com/tmux-plugins/tpm
+
+Install tpm for plugn management
+
+```
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
+
+Tmux config file
+
+```
+unbind r
+bind r source-file ~/.tmux.conf \; display-message "Config reloaded..."
+
+set -g prefix C-s
+
+set -g mouse on
+
+set -g status-position top
+
+set -g default-terminal "tmux-256color"
+
+bind-key h select-pane -L
+bind-key j select-pane -D
+bind-key k select-pane -U
+bind-key l select-pane -R
+
+# List of plugins
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'catppuccin/tmux'
+
+
+# Configure the catppuccin plugin
+set -g @catppuccin_flavor "mocha"
+set -g @catppuccin_window_status_style "rounded"
+
+# Make the status line pretty and add some modules
+set -g status-right-length 100
+set -g status-left-length 100
+set -g status-left ""
+set -gF  status-right "#{@catppuccin_status_directory}"
+set -agF status-right "#{@catppuccin_status_session}"
+set -agF status-right "#{@catppuccin_status_user}"
+set -agF status-right "#{@catppuccin_status_host}"
+set -agF status-right "#{E:@catppuccin_status_date_time}"
+
+# Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
+run '~/.tmux/plugins/tpm/tpm'
+```
+
+Install tpm plugins with ``C-s + I``
