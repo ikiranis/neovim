@@ -14,7 +14,7 @@ return {
                     "lua_ls",
                     "ts_ls",
                     "intelephense",
-                    "phpactor",
+                    -- "phpactor",
                     "html",
                     "vuels",
                     "tailwindcss",
@@ -45,9 +45,9 @@ return {
             lspconfig.intelephense.setup({
                 capabilities = capabilities
             })
-            lspconfig.phpactor.setup({
-                capabilities = capabilities
-            })
+            -- lspconfig.phpactor.setup({
+            --     capabilities = capabilities
+            -- })
             lspconfig.vuels.setup({
                 capabilities = capabilities
             })
