@@ -150,3 +150,16 @@ run '~/.tmux/plugins/tpm/tpm'
 ```
 
 Install tpm plugins with ``C-s + I``
+
+
+### Main neovim keybindings
+
+Ctrl + p: Fuzzy finder
+Ctrl + e: Old files
+Space + Space: Search on project (live-grep)
+Alt + c: Copilot chat
+Alt + enter: Autocomplete with copilot
+Alt + 1: Toggle NeoTree
+gcc: Comment line
+gbc: Comment block
+
