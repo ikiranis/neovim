@@ -162,4 +162,4 @@ Alt + enter: Autocomplete with copilot
 Alt + 1: Toggle NeoTree
 gcc: Comment line
 gbc: Comment block
-
+Ctrl + Alt + l: Format code
