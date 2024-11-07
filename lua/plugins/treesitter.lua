@@ -1,3 +1,5 @@
+-- Highlighting, indentation, and text objects for many languages
+
 return {
     {
         "nvim-treesitter/nvim-treesitter",

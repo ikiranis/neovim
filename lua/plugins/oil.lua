@@ -1,3 +1,5 @@
+-- Edit filesystem files, like editing a file
+
 return {
   "stevearc/oil.nvim",
   config = function()

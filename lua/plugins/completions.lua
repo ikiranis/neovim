@@ -1,3 +1,5 @@
+-- Autocomplete for LSP and snippets
+
 return {
   {
     "hrsh7th/cmp-nvim-lsp"

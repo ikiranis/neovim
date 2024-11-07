@@ -1,3 +1,5 @@
+-- Support for Language Server Protocol
+
 return {
     {
         "williamboman/mason.nvim",

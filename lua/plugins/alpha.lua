@@ -1,3 +1,5 @@
+-- Main dashboard on vim startup
+
 return {
   "goolord/alpha-nvim",
   dependencies = {

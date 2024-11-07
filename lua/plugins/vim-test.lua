@@ -1,3 +1,5 @@
+-- Run tests
+
 return {
   "vim-test/vim-test",
   dependencies = {

@@ -1,3 +1,5 @@
+-- Plugin for statusline
+
 return {
     "nvim-lualine/lualine.nvim",
     config = function()

@@ -1,3 +1,5 @@
+-- Copilot autocomplete plugins
+
 return {
     "github/copilot.vim",
     config = function()

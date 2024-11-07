@@ -1,3 +1,5 @@
+-- NeoVim plugin for navigation between tmux panes and vim splits
+
 return {
   "alexghergh/nvim-tmux-navigation",
   config = function()

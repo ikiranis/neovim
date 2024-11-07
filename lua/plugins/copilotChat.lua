@@ -1,3 +1,5 @@
+-- Copilot Chat Plugin
+
 return {
     {
         "CopilotC-Nvim/CopilotChat.nvim",
