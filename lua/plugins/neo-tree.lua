@@ -8,7 +8,7 @@ return {
         "s1n7ax/nvim-window-picker"
 	},
 	config = function()
-        vim.api.nvim_set_keymap('n', '<A-1>', ':Neotree toggle<CR>', { noremap = true, silent = true })
+        vim.api.nvim_set_keymap('n', '<A-1>', ':Neotree toggle reveal<CR>', { noremap = true, silent = true })
 		vim.keymap.set("n", "<leader>bf", ":Neotree buffers reveal float<CR>", {})
 	end
 }
