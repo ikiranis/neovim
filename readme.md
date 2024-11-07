@@ -22,6 +22,8 @@ https://github.com/cpow/neovim-for-newbs
 
 ### Install nerd-fonts, for icons. Run the following script
 
+https://github.com/ryanoasis/nerd-fonts
+
 ```
 #!/bin/bash
 
@@ -46,7 +48,7 @@ declare -a fonts=(
 	UbuntuMono
 )
 
-version='2.1.0'
+version='3.2.1'
 fonts_dir="${HOME}/.local/share/fonts"
 
 if [[ ! -d "$fonts_dir" ]]; then
