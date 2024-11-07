@@ -73,23 +73,6 @@ return {
 			vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
 			vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, {})
 			vim.keymap.set("n", "<a-cr>", vim.lsp.buf.code_action, {})
-
-			-- List of tools to install
-			local tools = {
-				"stylua",
-                "prettier",
-                "pretty-php",
-                "google-java-format",
-			}
-
-			-- Function to ensure tools are installed
-			local mason_registry = require("mason-registry")
-			for _, tool in ipairs(tools) do
-				local package = mason_registry.get_package(tool)
-				if not package:is_installed() then
-					package:install()
-				end
-			end
 		end,
 	},
 }
