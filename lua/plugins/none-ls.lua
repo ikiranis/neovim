@@ -10,13 +10,12 @@ return {
         null_ls.setup({
 
             sources = {
-                require("none-ls.diagnostics.eslint_d"),
-                require("none-ls.diagnostics.intelephense"),
                 null_ls.builtins.formatting.stylua,
                 null_ls.builtins.formatting.prettier,
                 null_ls.builtins.formatting.pretty_php,
                 null_ls.builtins.formatting.google_java_format,
                 null_ls.builtins.formatting.pint,
+                require("none-ls.diagnostics.eslint_d"),
             },
         })
 
