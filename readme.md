@@ -117,6 +117,8 @@ set -g prefix C-s
 
 set -g mouse on
 
+set -g set-clipboard on
+
 set -g status-position top
 
 set -g default-terminal "tmux-256color"
@@ -129,6 +131,7 @@ bind-key l select-pane -R
 # List of plugins
 set -g @plugin 'tmux-plugins/tpm'
 set -g @plugin 'catppuccin/tmux'
+set -g @plugin 'tmux-plugins/tmux-yank'
 
 
 # Configure the catppuccin plugin
@@ -145,8 +148,8 @@ set -agF status-right "#{@catppuccin_status_user}"
 set -agF status-right "#{@catppuccin_status_host}"
 set -agF status-right "#{E:@catppuccin_status_date_time}"
 
-### Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
-run '~/.tmux/plugins/tpm/tpm'
+# Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
+run '~/.tmux/plugins/tpm/tpm' 
 ```
 
 Install tpm plugins with ``C-s + I``
