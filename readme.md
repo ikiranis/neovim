@@ -1,6 +1,6 @@
 ### Install
 
-Clone this repo to `~/.config/nvim` and run ``nvim``. It will install all plugins.
+Clone this repo to `~/.config/nvim` and run `nvim`. It will install all plugins.
 
 ### Install fd and ripgrep, for live-grep plugin
 
@@ -16,7 +16,7 @@ Based on the following tutorials/code
 
 https://www.youtube.com/playlist?list=PLsz00TDipIffreIaUNk64KxTIkQaGguqn
 
-#### Github repo 
+#### Github repo
 
 https://github.com/cpow/neovim-for-newbs
 
@@ -78,7 +78,7 @@ https://raw.githubusercontent.com/dDeedev/install-nerd-font-linux/refs/heads/mai
 :UpdateRemotePlugins
 ```
 
-### Use of CopilotChat 
+### Use of CopilotChat
 
 ```
 :CopilotChat
@@ -90,6 +90,22 @@ https://github.com/CopilotC-Nvim/CopilotChat.nvim
 
 https://copilotc-nvim.github.io/CopilotChat.nvim/
 
+### Setup xdebug for php
+
+Install vscode-php-debug extension
+
+```
+mkdir ~/php-debug && \
+cd ~/php-debug && \
+git clone https://github.com/xdebug/vscode-php-debug.git . && \
+npm install && npm run build
+```
+
+Maybe you have to change the pathMappings for docker in the debugging.lua file
+
+```
+["/var/www/html"] = "${workspaceFolder}"
+```
 
 ### Setup Tmux
 
@@ -149,10 +165,10 @@ set -agF status-right "#{@catppuccin_status_host}"
 set -agF status-right "#{E:@catppuccin_status_date_time}"
 
 # Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
-run '~/.tmux/plugins/tpm/tpm' 
+run '~/.tmux/plugins/tpm/tpm'
 ```
 
-Install tpm plugins with ``C-s + I``
+Install tpm plugins with `C-s + I`
 
 ### Use tmux-yank for copy to system folder
 
