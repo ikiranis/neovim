@@ -145,12 +145,15 @@ set -agF status-right "#{@catppuccin_status_user}"
 set -agF status-right "#{@catppuccin_status_host}"
 set -agF status-right "#{E:@catppuccin_status_date_time}"
 
-# Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
+### Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
 run '~/.tmux/plugins/tpm/tpm'
 ```
 
 Install tpm plugins with ``C-s + I``
 
+### Use tmux-yank for copy to system folder
+
+https://github.com/tmux-plugins/tmux-yank
 
 ### Main neovim keybindings
 
