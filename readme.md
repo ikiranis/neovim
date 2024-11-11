@@ -107,6 +107,8 @@ Maybe you have to change the pathMappings for docker in the debugging.lua file
 ["/var/www/html"] = "${workspaceFolder}"
 ```
 
+@source https://esvi.ai/posts/how-i-debug-php-with-neovim/
+
 ### Setup Tmux
 
 #### Source tutorial
