@@ -81,3 +81,7 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 
 -- Set session options
 vim.o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
+
+-- Set spell check
+vim.opt.spelllang = { 'en_us', 'el_GR' }
+vim.opt.spell = true
