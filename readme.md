@@ -2,7 +2,7 @@
 
 Clone this repo to `~/.config/nvim` and run `nvim`. It will install all plugins.
 
-### Install programs depedencies 
+### Install some depedencies 
 
 Install fd and ripgrep, for live-grep plugin. Install lazygit for git plugin
 
