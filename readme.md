@@ -229,3 +229,4 @@ Alt + 1: Toggle NeoTree
 gcc: Comment line
 gbc: Comment block
 Ctrl + Alt + l: Format code
+Space + lg: Commit changes to git (lazygit)
