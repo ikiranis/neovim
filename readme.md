@@ -168,6 +168,13 @@ set -agF status-right "#{@catppuccin_status_user}"
 set -agF status-right "#{@catppuccin_status_host}"
 set -agF status-right "#{E:@catppuccin_status_date_time}"
 
+# Toggle terminal pane
+# for splits
+#bind-key -n 'C-\' run-shell -b "${HOME}/.local/bin/tmux-toggle-term"
+
+# or, for floats
+bind-key -n 'C-\' run-shell -b "${HOME}/.local/bin/tmux-toggle-term float"
+
 # Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
 run '~/.tmux/plugins/tpm/tpm'
 ```
@@ -177,6 +184,39 @@ Install tpm plugins with `C-s + I`
 ### Use tmux-yank for copy to system folder
 
 https://github.com/tmux-plugins/tmux-yank
+
+### Make a file, to use for terminal float in tmux
+
+Create file ``~/.local/bin/tmux-toggle-term``
+
+Add the code inside
+
+```
+#!/bin/bash
+
+set -uo pipefail
+
+FLOAT_TERM="${1:-}"
+LIST_PANES="$(tmux list-panes -F '#F' )"
+PANE_ZOOMED="$(echo "${LIST_PANES}" | grep Z)"
+PANE_COUNT="$(echo "${LIST_PANES}" | wc -l | bc)"
+
+if [ -n "${FLOAT_TERM}" ]; then
+  if [ "$(tmux display-message -p -F "#{session_name}")" = "popup" ];then
+    tmux detach-client
+  else
+    tmux popup -d '#{pane_current_path}' -xC -yC -w90% -h80% -E "tmux attach -t popup || tmux new -s popup"
+  fi
+else
+  if [ "${PANE_COUNT}" = 1 ]; then
+    tmux split-window -c "#{pane_current_path}"
+  elif [ -n "${PANE_ZOOMED}" ]; then
+    tmux select-pane -t:.-
+  else
+    tmux resize-pane -Z -t1
+  fi
+fi
+```
 
 ### Main neovim keybindings
 
