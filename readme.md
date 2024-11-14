@@ -218,6 +218,8 @@ else
 fi
 ```
 
+@source https://dev.to/pbnj/tmux-toggle-able-terminals-in-split-panes-or-floating-windows-17pa
+
 ### Main neovim keybindings
 
 Ctrl + p: Fuzzy finder
