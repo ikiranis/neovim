@@ -47,6 +47,7 @@ return {
 				"pylint",
 				"eslint_d",
 				"php-cs-fixer",
+                "fixjson",
 			},
 		})
 	end,
